@@ -19,10 +19,10 @@ START Page structure and element resets
   --color-bg: #ffffff; /* Used for the page body background */
   --color-bg-alt: #ffffff; /* Used for social icons on hover */
   --color-text-main: #000000; /* List text ann social icons on hover */
-  --color-primary: #008323; /* Headers and borders */
-  --color-forms: #008323; /* Form borders and highlights */
+  --color-primary: #c90000; /* Headers and borders */
+  --color-forms: #c90000; /* Form borders and highlights */
   --color-forms-focus: #ff9028; /* Form borders and highlights */
-  --color-buttons: #c8ffbf; /* Button colors */
+  --color-buttons: #f4c4c4; /* Button colors */
 }
 
 /* Basic page style resets */
@@ -74,6 +74,9 @@ main {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 0 0 0;
@@ -266,7 +269,7 @@ p {
 #install-nudge {
   padding: 0.5rem 2rem;
   text-align: left;
-  background-color: #ffff99;
+  background-color: #f6ceab;
   margin-bottom: 0;
 
   /* Display is controlled in JavaScript */
@@ -339,7 +342,7 @@ img.install {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 150px;
   margin-right: 10px
 }
 
