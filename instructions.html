@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobile Scam Project</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- OpenGraph/Social sharing -->
+    <meta name="description" content="Tell us about the scam communication you receive" />
+    <meta name="og:description" content="Tell us about the scam communication you receive" />
+    <meta property="og:image" content="assets/mobile-scam-icon-3-512.png" />
+    <meta property="og:title" content="Mobile Scam Project" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/mobile-scam-icon-3-180.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="/app.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="faq.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <div id="install-nudge">
+        <div class="content">
+          <div>You can install this app!</div>
+          <a href="install.html" class="install">HOW TO INSTALL?</a>
+          <a id="close-button" class="close">&#215;</a>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <main>
+      <nav class="mobilelinks" id="mobile-links">
+        <div class="moblinks"><a href="index.html">Submit a scam</a></div>
+        <div class="moblinks"><a href="instructions.html">Instructions</a></div>
+        <div class="moblinks"><a href="contact.html">Technical support</a></div>
+        <div class="moblinks"><a href="support.html">Scam support</a></div>
+      </nav>
+
+      <div class="wrapper">
+        <div class="content">
+          <h1>Instructions</h1>
+
+              <a class="question" href="#">I'm a new participant. What do I need to do?</a>
+              <div class="answer">
+                <p>There are three things for you to do:</p>
+                <p>1. Fill out the <a href="https://www.surveymonkey.com/r/HB8MBTK">consent form</a> which we need to start you off. This should take about 2-3 minutes. You can access the consent form by clicking <a href="https://www.surveymonkey.com/r/HB8MBTK">here.</a></p>
+                <p>2. Check out the study instructions below.</p>
+                <p>3. Each time you receive a scam call or message, open the Scam Study app and report the scam to us.</p>
+                <p>Thanks so much for joining this study, we really hope your participation will help us to reduce the number of scam calls and messages Australians are getting.</p>
+              </div>
+
+              <a class="question" href="#">How do I install the app?</a>
+              <div class="answer">
+                <p>To make it easy for you, we have an app that you can install. This app will give you an easy to use button on your phone to press every time you receive a scam call or message. The app is very secure, and it will <i>never</i> take any data from your phone that you don’t enter into the app.</p>
+                <p>To download and install, follow these steps:</p>
+                <p>• On your smartphone go to <a href="https://www.mobilescamproject.com.au/">https://www.mobilescamproject.com.au/</a></p>
+                <p>• Click the install button (top of the page, yellow bar) for instructions.</p>
+                <p> - For <b>ANDROID</b> phones, look for the “More” menu. This is the “three dots” menu in Chrome but could be different depending on your browser. Next, select “Add to Home Screen,” and then follow the prompts.</p> 
+                <p> - For <b>APPLE / iOS</b> phones, look for the share button in Safari, select “Add to Home Screen,” and then follow the prompts.</p> 
+                <p>If for any reason you cannot install the app, please visit the link above to inform us of any scam communication you receive.</p>
+              </div>
+
+              <a class="question" href="#">How do I notify the study when I receive a scam call or message?</a>
+              <div class="answer">
+                <p>Each time you receive a call or message you think may be a scam, we would like you to fill out a few short details by opening the app or clicking on the secure link we have sent to you as a text/SMS.</p>
+                <p>The interface asks a few brief questions, and should take no more than two minutes to complete.</p>
+                
+                <h3>First step</h3>
+                <p><b>Please enter your unique identifier we have sent you by SMS.</b> This helps us to match your scam experiences with the survey data you’ve already provided, so we can better map where and when people are targeted.</p>
+                <p><b>Please also enter your initials.</b> This is so we can error-check against any typo in the unique identifier and to help you with any technical issues that may arise.</p>
+                <p><b>What would you like to do?</b> Finally, we ask if you want to report a scam call/message.</p>   
+                <p> - Yes: will take you to the reporting page</p>
+                <p> - No:  will end the report </p>
+                <p><i>If you remember, it’s helpful to let us know at the end of each day if you haven’t had any scam messages, that way we can better track the days when people are most targeted. Hit “No I am letting you know I have had no scam today” and that will end the questions for the day.</i></p>
+                <img class="instructions" src="assets/asset1.png">
+
+                <h3>Second step</h3>
+                <p>Firstly, we will ask how certain you are that the call/message you received was a scam.</p>
+                <p>Secondly, we ask what service the scam came through on</p>
+                <p><b> - Phone</b> (including voicemail)</p>
+                <p><b> - SMS</b> (text message)</p>  
+                <p><b> - Digital platform message</b> (e.g., Messenger, Instagram)</p>   
+                <p><b> - Digital platform call</b> (e.g. Messenger, Whatsapp)</p>   
+                <p><b> - Digital platform post</b> (e.g. Facebook, Instagram)</p>   
+                <p><i>This will direct the interface to the right set of questions, which will then take about 1 more minute to complete.</i></p>
+               <img class="instructions" src="assets/asset2.png">
+
+               <h3>Third step</h3>
+                <p>Here we ask some details about the scam communication and ask you to upload a screenshot. See the question below for how to do that on Android phones or on iOS phones. The process is very simple.</p>
+                <p>Alternatively, if you do not wish to upload a screenshot (or if the scam was a call) you can provide some details about what the scam was about in the box at the bottom of the page. </p>
+                <img class="instructions" src="assets/asset3.png">
+
+                <h3>Fourth step</h3>
+                <p>Finally, we will ask a few very quick questions about:</p>
+                <p> (a)	Where you have (or might) report the scam to authorities, banks etc.</p>
+                <p> (b)	Three quick questions about your attitude to scams.</p>
+                <img class="instructions" src="assets/asset4.png">
+              </div>
+
+              <a class="question" href="#">How do I take and upload a screenshot on an iPhone?</a>
+              <div class="answer">
+                <p>Each time you receive a message you think may be a scam, we would like you to upload a screenshot of the scam message and any responses you give. This may be a text message (SMS), a platform message (e.g., Facebook Messenger) or a platform post that appears on a social media feed.</p>
+                <h3>How to take a screenshot on an iPhone with Face ID?</h3>
+                <p>1. Press the Side button and the Volume up button at the same time.</p>
+                <img class="instructions" src="assets/iphone-x-and-later-take-screenshot.png">
+                <p>2. Quickly release both buttons.</p>
+                <p>3.	The screenshot will automatically be saved into your phone’s Photo Library.</p>
+                <h3>How to take a screenshot on an iPhone with Touch ID?</h3>
+                <p>1. Press the Side button and the Home button at the same time.</p>
+                <img class="instructions" src="assets/iphone-home-button-take-screenshot.png">
+                <p>2. Quickly release both buttons.</p>
+                <p>3.	The screenshot will automatically be saved into your phone’s Photo Library.</p>
+                <h3>How do I upload the screenshot to the study?</h3>
+                <p>1. When you get to Question 8 in the questionnaire, please press the green bar “Choose File”.</p>
+                <img class="instructions" src="assets/asset12.png">
+                <p>2. Select “Photo Library”. This will take you to the most recent photos in your Photo Library.</p>
+                <img class="instructions" src="assets/asset13.png">
+                <p>3. Select the screenshot of the scam message. It will upload automatically. Continue to the end of questionnaire.</p>
+                <img class="instructions" src="assets/asset14.png">
+                <h3>Alternative step</h3>
+                <p>If you are having trouble adding a screenshot – or you prefer not to add one – please use the next box (Question 9) to describe the scam communication. If you can cut-and-paste the message and add the phone number (if any) that would be very helpful.</p>
+                <p>Any information will help the study, and that will help us develop ways to reduce scam targeting in Australia.</p>
+                </div>
+
+              <a class="question" href="#">How do I take and upload a screenshot on an Android phone?</a>
+              <div class="answer">
+                <p>Each time you receive a message you think may be a scam, we would like you to upload a screenshot of the scam message and any responses you give. This may be a text message (SMS), a platform message (e.g., Facebook Messenger) or a platform post that appears on a social media feed.</p>
+                <h3>How do I take a screenshot?</h3>
+                <p>1. Press the Power and Volume down buttons at the same time.</p>
+                <p>2. If that doesn't work, press and hold the Power button for a few seconds. Then tap Screenshot.</p>
+                <p>If neither of these work, go to your <a href="https://support.google.com/android/answer/3094742?sjid=2705655391531367505-AP">phone manufacturer's support site</a> for help.</p>
+                <h3>How do I upload the screenshot to the study?</h3>
+                <p>1. When you get to the part of the questionnaire that asks about a screenshot, please press the green bar “Choose File”.</p>
+                <img class="instructions" src="assets/asset15.png">
+                <p>2. Select the option for "Media picture".</p>
+                <img class="instructions" src="assets/asset16.png">
+                <p>3. This will open a file menu (usually to your recent files list where you’ll see any recent screenshots). Here, you can select the right screenshot. </p>
+                <p>Be careful not to mistakenly select something which may identify you (but if you do, we will delete it from our records).</p>
+                <p>If the interface doesn’t show your screenshot then you may need to navigate using the buttons at the top or side to your “Screenshots” folder (which is sometimes contained inside the “Pictures” folder).</p>
+                <h3>Alternative step</h3>
+                <p>If you are having trouble adding a screenshot – or you prefer not to add one – please use the next box (Question 9) to describe the scam communication. If you can cut-and-paste the message and add the phone number (if any) that would be very helpful.</p>
+                <p>Any information will help the study, and that will help us develop ways to reduce scam targeting in Australia.</p>
+                </div>
+
+              <a class="question" href="#">What if I don’t receive any scam calls/messages each day?</a>
+              <div class="answer">
+                <p>If you don’t receive any scam calls or messages on any particular day, we ask that you still go into the app and, on the opening page, select “<i>I am letting you know I have had no scam communication/messages today.</i>”</p>
+                <p>This will let us know you didn’t get any scam messages, and that you’re still engaged in the study so we can pay you.</p>
+                </div>
+              
+              <a class="question" href="#">How will I get paid my $80 for participating?</a>
+              <div class="answer">
+                <p>After the completion of the study, you will be paid $80 in appreciation of your time and support.</p>
+                <p>Just after the 14-day study is complete, we will send you a link to a secure form where you can provide your bank details. RMIT University will then process the payment, which should take a further 7-14 days.</p>
+                <p>To make sure you’re eligible for payment, remember to submit the form every day, including the days in which you receive no scam communication, by clicking the “<i>I am letting you know I have had no scam communication/messages today</i>” button.</p>
+              </div>
+
+                <a class="question" href="#">I have other technical issues?</a>
+                <div class="answer">
+                  <p>If you are having any technical issues, please fill in the brief form <a href="contact.html">here</a> and one of the team will be in touch by SMS or email, usually within 24 hours.</p>
+                  <p>You can also email us with any questions at <a href="mailto:scam.study.2024@gmail.com">scam.study.2024@gmail.com</a></p>
+                  </div>
+
+                <a class="question" href="#">What if I get scammed during the study?</a>
+                <div class="answer">
+                  <p>We hope no one will be scammed, but occasionally it does happen to the best of us.</p>
+                  <p>If during the study (or at any time afterwards) you are concerned that you may have been scammed, we have some guidelines and advice for who to contact, attached <a href="https://www.dropbox.com/scl/fi/muvwo10815a1mrz2nuuk7/Scam-support-sheet.pdf?rlkey=ngqnmu8hiahpk2ltkjxsj8iun&dl=0">here</a>. You may wish to download this sheet and keep it as easy reference.</p>
+                  </div>
+
+          
+        </div>
+
+      </div>
+
+      
+      <footer class="footer">
+        <div class="tagline">
+          <b></b><br />
+          <br />
+          
+        </div>
+        <a
+          href="https://digital-ethnography.com">
+          <img class="logo"
+            src="https://cdn.glitch.global/11816c66-cf2d-423a-9337-de57f5702dea/Picture%201.png?v=1718016112840"
+            alt="digital ethnography research centre"/>
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>

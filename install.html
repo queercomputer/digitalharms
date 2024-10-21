@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobile Scam Project</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- OpenGraph/Social sharing -->
+    <meta name="description" content="Tell us about the scam communication you receive" />
+    <meta name="og:description" content="Tell us about the scam communication you receive" />
+    <meta property="og:image" content="assets/mobile-scam-icon-3-512.png" />
+    <meta property="og:title" content="Mobile Scam Project" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/mobile-scam-icon-3-180.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="/app.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="menu.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <div id="install-nudge">
+        <div class="content">
+          <div>You can install this app!</div>
+          <a href="install.html" class="install">HOW TO INSTALL?</a>
+          <a id="close-button" class="close">&#215;</a>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <main>
+
+      <nav class="mobilelinks" id="mobile-links">
+        <div class="moblinks"><a href="index.html">Submit a scam</a></div>
+        <div class="moblinks"><a href="instructions.html">Instructions</a></div>
+        <div class="moblinks"><a href="contact.html">Technical support</a></div>
+        <div class="moblinks"><a href="support.html">Scam support</a></div>
+      </nav>
+
+      <div class="wrapper">
+        <div class="content">
+          <h1>Install the Scam Study app</h1>
+          <p>
+            Installing a web app is easy, but it might be new to you. That's okay! Here's a look at how
+            you can install this app for most device types.
+          </p>
+          
+          <h2>iOS (iPhone)</h2>
+          <p>1. Click the share button in Safari.</p>
+          <img class="instructions" src="assets/asset8.png">
+          <p>2. Select "Add to Home Screen".</p>
+          <img class="instructions" src="assets/asset9.png">
+          <p>3. Follow the prompts / click Add.</p>
+          <img class="instructions" src="assets/asset10.png">
+          <p>This will place an easy-to-use button on your phone screen. The button looks like this and is called “Scam Study”.</p>
+          <img class="instructions" src="assets/asset11.png">
+          
+          <h2>Android</h2>
+          <p>1. Click on the three dots at the top right of the screen and find the words "Add to Home screen"</p>
+          <img class="instructions" src="assets/asset5.png">
+          <p>2. This will open a box that says "Add to home screen". Click the "Install" button.</p>
+          <img class="instructions" src="assets/asset6.png">
+          <p>3. This will put an easy-to-use button for quick access on your phone screen. The button looks like this and is called “Scam Study”.</p>
+          <img class="instructions" src="assets/asset7.png">
+          <p>If you’re having any trouble installing the app, please let us know via the <a href="contact.html">technical support page</a></p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="tagline">
+          <b></b><br />
+          <br />
+          
+        </div>
+        <a
+          href="https://digital-ethnography.com">
+          <img class="logo"
+            src="https://cdn.glitch.global/11816c66-cf2d-423a-9337-de57f5702dea/Picture%201.png?v=1718016112840"
+            alt="digital ethnography research centre"/>
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>

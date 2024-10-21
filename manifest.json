@@ -1,0 +1,35 @@
+{
+  "name": "Mobile Scam Project",
+  "short_name": "Scam Study",
+  "description": "Tell us about the scam communication you receive",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "512x512",
+      "type": "image/png",
+      "src": "assets/mobile-scam-icon-3-512.png",
+      "purpose": "any"
+    },
+    {
+      "sizes": "192x192",
+      "type": "image/png",
+      "src": "assets/mobile-scam-icon-3-192.png",
+      "purpose": "any"
+    },
+    {
+      "sizes": "180x180",
+      "type": "image/png",
+      "src": "assets/mobile-scam-icon-3-180.png",
+      "purpose": "any"
+    },
+    {
+      "sizes": "120x120",
+      "type": "image/png",
+      "src": "assets/mobile-scam-icon-3-120.png",
+      "purpose": "any"
+    }
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "start_url": "/"
+}

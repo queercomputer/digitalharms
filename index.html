@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobile Scam Project</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- OpenGraph/Social sharing -->
+    <meta name="description" content="Tell us about the scam communication you receive" />
+    <meta name="og:description" content="Tell us about the scam communication you receive" />
+    <meta property="og:image" content="assets/mobile-scam-icon-3-512.png" />
+    <meta property="og:title" content="Mobile Scam Project" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/mobile-scam-icon-3-180.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="/app.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="menu.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <div id="install-nudge">
+        <div class="content">
+          <div>You can install this app!</div>
+          <a href="install.html" class="install">HOW TO INSTALL?</a>
+          <a id="close-button" class="close">&#215;</a>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+
+      <nav class="mobilelinks" id="mobile-links">
+        <div class="moblinks"><a href="index.html">Submit a scam</a></div>
+        <div class="moblinks"><a href="instructions.html">Instructions</a></div>
+        <div class="moblinks"><a href="contact.html">Technical support</a></div>
+        <div class="moblinks"><a href="support.html">Scam support</a></div>
+      </nav>
+
+      <div class="wrapper">
+        <div class="content">
+
+          
+
+          <h1>Mobile Scam Study</h1>
+
+          <button class="button" id="button-notifications">enable notifications</button>
+
+          <p>
+            Please use the form below to report every scam message or call you receive. 
+            If you haven’t received any scams on a particular day, 
+            please still submit the form at least once daily to let us know.
+          </p>
+
+          <h3>Thank you for joining the Mobile Scam study.</h3> 
+          <p>Please be advised that the study runs for 14 days from the date you started:</p>
+          <p class ="dates"> •	17 June to 30 June 2024</p>
+          <p class ="dates"> •	24 June to 07 July 2024</p>
+          
+
+          <br>
+        </div>
+        <script>
+          (function (t, e, s, n) {
+            var o, a, c;
+            (t.SMCX = t.SMCX || []),
+              e.getElementById(n) ||
+                ((o = e.getElementsByTagName(s)),
+                (a = o[o.length - 1]),
+                (c = e.createElement(s)),
+                (c.type = "text/javascript"),
+                (c.async = !0),
+                (c.id = n),
+                (c.src =
+                  "https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdxY8CtzBjMr122dMOvuNFQaYhx8YIY2r0VTkaTOGFy0d.js"),
+                a.parentNode.insertBefore(c, a));
+          })(window, document, "script", "smcx-sdk");
+        </script>
+      </div>
+
+      <footer class="footer">
+        <div class="tagline">
+          <b></b><br />
+          <br />
+          
+        </div>
+        <a
+          href="https://digital-ethnography.com">
+          <img class="logo"
+            src="https://cdn.glitch.global/11816c66-cf2d-423a-9337-de57f5702dea/Picture%201.png?v=1718016112840"
+            alt="digital ethnography research centre"/>
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>
