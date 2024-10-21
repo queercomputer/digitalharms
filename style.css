@@ -19,8 +19,8 @@ START Page structure and element resets
   --color-bg: #ffffff; /* Used for the page body background */
   --color-bg-alt: #ffffff; /* Used for social icons on hover */
   --color-text-main: #000000; /* List text ann social icons on hover */
-  --color-primary: #c90000; /* Headers and borders */
-  --color-forms: #c90000; /* Form borders and highlights */
+  --color-primary: #990000; /* Headers and borders */
+  --color-forms: #990000; /* Form borders and highlights */
   --color-forms-focus: #ff9028; /* Form borders and highlights */
   --color-buttons: #f4c4c4; /* Button colors */
 }
@@ -196,6 +196,7 @@ ul {
 .wrapper a:active,
 .wrapper a:focus {
   background: var(--color-primary);
+  color:#ffffff;
 }
 /******************************************************************************
 END Page structure and element resets
