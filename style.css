@@ -192,11 +192,15 @@ ul {
   color: var(--color-text-main);
   transition: background 0.2s linear;
 }
+.wrapper a:not(.btn--remix):hover,
+.wrapper a:not(.btn--remix):active,
+.wrapper a:not(.btn--remix):focus {
+  color: #ffffff;
+}
 .wrapper a:hover,
 .wrapper a:active,
 .wrapper a:focus {
   background: var(--color-primary);
-  color:#ffffff;
 }
 /******************************************************************************
 END Page structure and element resets
