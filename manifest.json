@@ -1,7 +1,7 @@
 {
-  "name": "Mobile Scam Project",
-  "short_name": "Scam Study",
-  "description": "Tell us about the scam communication you receive",
+  "name": "Digital Harms Study",
+  "short_name": "Digital Harms",
+  "description": "Record any online harms you receive or witness",
   "display": "standalone",
   "icons": [
     {
