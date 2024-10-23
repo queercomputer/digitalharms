@@ -30,16 +30,6 @@
   <link rel="stylesheet" href="https://unpkg.com/survey-jquery@1.11.10/defaultV2.min.css" />
   <script src="./theme.js"></script>
 
-  <style>
-    /* Custom styles from your original survey */
-    .sv_main .sv_q_title {
-      margin-bottom: 20px; /* Adjust question title spacing */
-    }
-    .sv_main .sv_q_other {
-      margin-top: 10px; /* Adjust 'Other' option spacing */
-    }
-    /* Add any additional custom styles as needed */
-  </style>
 
   </head>
   <body>
@@ -176,8 +166,7 @@
 
     // Initialize the survey model
     const survey = new Survey.Model(json);
-
-    survey.applyTheme(themeJson); 
+    survey.applyTheme(themeJson); //
 
     // Render the survey
     $("#surveyElement").Survey({
