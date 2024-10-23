@@ -166,8 +166,7 @@
     // Initialize the survey model
     const survey = new Survey.Model(json);
 
-    // Optional: Apply a custom theme if you have one
-    // survey.applyTheme(themeJson); // Uncomment and provide 'themeJson' if using a custom theme
+    survey.applyTheme(themeJson); 
 
     // Render the survey
     $("#surveyElement").Survey({
