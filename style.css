@@ -28,7 +28,7 @@ START Page structure and element resets
 /* Basic page style resets */
 * {
   box-sizing: border-box;
-  font-size: 16px; /* Not setting this makes iOS zooooooom too much! */
+  font-size: 24px; /* Not setting this makes iOS zooooooom too much! */
 }
 [hidden] {
   display: none !important;
