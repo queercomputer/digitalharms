@@ -161,6 +161,15 @@ h3 {
   justify-content: center;
 }
 
+h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: clamp(0.5rem, -0.875rem + 2.333vw, 1rem);
+  display: inline-flex;
+  color: black;
+  justify-content: center;
+}
+
 ul > li,
 ol > li {
   margin-bottom: 0.75rem;
