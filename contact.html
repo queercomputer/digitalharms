@@ -59,7 +59,7 @@
           <h1>Technical support</h1>
             <p>If you are experiencing any technical issues, please use the form below to contact us.</p>
             <p>This form is to help identify the problem so we can contact you quickly to provide any advice, guidance or fixes.</p>
-            <div id="surveyElement" style="margin-top: 20px; min-height: 400px; max-width: 800px"></div>
+            <div id="surveyElement" style="margin-top: 20px; margin-bottom: 20px; min-height: 400px; max-width: 800px"></div>
 
   <script type="text/javascript">
     // Survey JSON definition
@@ -154,7 +154,7 @@
             },
             {
               "type": "comment",
-              "name": "optional",
+              "name": "further_comments",
               "title": "[Optional] If you would like to say anything else here about the technical issues please feel free to comment",
             }
           ]
@@ -176,7 +176,7 @@
         console.log("Survey results: " + JSON.stringify(result.data));
 
         // Send survey data to the backend (update the URL to your server endpoint)
-        fetch('https://your-server-endpoint.com/submit', {
+        fetch('https://script.google.com/macros/s/AKfycbyW4tsNrfxKXJg4q7FzdMrBG6hCHUqIpCDdoGKJ-L1AgVnJP2vmVLYRFto7RJ9Ip_XY9g/exec', {
           method: 'POST',
           mode: 'no-cors',
           headers: {
