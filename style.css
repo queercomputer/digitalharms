@@ -440,5 +440,9 @@ img.install {
 }
 
 div.sd-action-bar.sd-footer.sd-body__navigation.sd-clearfix {
-  padding-top: 20px;
+  padding-top: 15px;
+}
+
+div.smcx-widget-footer.smcx-embed-footer {
+  display: none;
 }
