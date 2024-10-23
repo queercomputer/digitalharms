@@ -168,6 +168,7 @@ h4 {
   display: inline-flex;
   color: black;
   justify-content: center;
+  font-weight: 400;
 }
 
 ul > li,
