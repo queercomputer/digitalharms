@@ -50,6 +50,141 @@
         <div class="content">
           <h1>Technical support</h1>
             <p>If you are experiencing any technical issues, please use the form below to contact us.</p>
+            <p>This form is to help identify the problem so we can contact you quickly to provide any advice, guidance or fixes.</p>
+            <div id="surveyElement" style="margin-top: 20px; min-height: 400px; max-width: 800px"></div>
+
+  <script type="text/javascript">
+    // Survey JSON definition
+    const json = {
+      "title": "Technical support",
+      "logo": "https://cdn.glitch.global/35610a81-fe0c-4e83-b839-1a6420e7b55c/Picture%201.png?v=1723530673267",
+      "pages": [
+        {
+          "name": "identity",
+          "title": "",
+          "elements": [
+            {
+              "type": "text",
+              "name": "identifier",
+              "isRequired": true,
+              "title": "What is the unique identifier (e.g., XB001) that we sent you by SMS/email?"
+            },
+            {
+              "type": "text",
+              "name": "initials",
+              "title": "What are your initials (e.g., RC). We only use these in case there is an error in the code so we can make sure we're getting the right person's data. Your initials will NEVER be shared with anyone else",
+              "isRequired": true,
+            },
+            {
+              "type": "radiogroup",
+              "name": "contact",
+              "title": "How would you like to be contacted?",
+              "isRequired": true,
+              "choices": [
+                "Phone call",
+                "Email"
+              ]
+            },
+          ]
+        },
+        {
+          "name": "Phone call",
+          "visibleIf": "{contact} = 'Phone call'",
+          "title": "Contact details",
+          "elements": [
+            {
+              "type": "text",
+              "name": "number",
+              "title": "Please enter your mobile phone number.",
+              "isRequired": true,
+            },
+          ]
+        },
+        {
+          "name": "Email",
+          "visibleIf": "{contact} = 'Email'",
+          "title": "Contact details",
+          "elements": [
+          {
+              "type": "text",
+              "name": "email",
+              "title": "Please enter your email address.",
+              "isRequired": true,
+            }
+          ]
+        },
+        {
+          "name": "Details",
+          "title": "Support issue",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "device",
+              "title": "What type of device are you experiencing the issue on?",
+              "isRequired": true,
+              "choices": [
+                "Android phone",
+                "Apple iPhone",
+                "Mac computer",
+                "Windows computer",
+                "Not sure",
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "checkbox",
+              "name": "issue",
+              "title": "My technical problems relate to (select all that apply)",
+              "isRequired": true,
+              "choices": [
+                "Opening the form",
+                "Answering questions on the form",
+                "Understanding a question",
+                "Uploading a screenshot",
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "comment",
+              "name": "optional",
+              "title": "[Optional] If you would like to say anything else here about the technical issues please feel free to comment",
+            }
+          ]
+        }
+      ],
+      "showQuestionNumbers": "off"
+    };
+
+    // Initialize the survey model
+    const survey = new Survey.Model(json);
+
+    // Optional: Apply a custom theme if you have one
+    // survey.applyTheme(themeJson); // Uncomment and provide 'themeJson' if using a custom theme
+
+    // Render the survey
+    $("#surveyElement").Survey({
+      model: survey,
+      onComplete: function (result) {
+        console.log("Survey results: " + JSON.stringify(result.data));
+
+        // Send survey data to the backend (update the URL to your server endpoint)
+        fetch('https://your-server-endpoint.com/submit', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(result.data),
+        })
+        .then(() => {
+          console.log('Success');
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+      }
+    });
+  </script>
             <p>You may also email us with any questions at <a href="mailto:scam.study.2024@gmail.com">scam.study.2024@gmail.com</a></p>
             <p>We will be in contact shortly to provide any advice, guidance or fixes as needed.</p>
         </div>
