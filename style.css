@@ -32,7 +32,7 @@ START Page structure and element resets
 }
 
 b {
-  font-size: 24px;
+  font-size: 18px;
 }
 [hidden] {
   display: none !important;
