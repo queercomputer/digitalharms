@@ -225,7 +225,6 @@ input,
 button {
   margin-top: 0.5rem;
   display: block;
-  height: 40px;
   width: 100%;
   border: 2px solid var(--color-forms);
 }
