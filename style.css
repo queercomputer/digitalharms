@@ -240,7 +240,8 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 10px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  padding: 10px;
 }
 button:focus {
   outline: none;
