@@ -7,7 +7,7 @@ const themeJson = {
     "backgroundImageAttachment": "scroll",
     "backgroundImageFit": "cover",
     "cssVariables": {
-      "--sd-base-vertical-padding":"25px",
+      "--sd-base-vertical-padding":"32px",
       "--sjs-corner-radius": "4px",
       "--sjs-base-unit": "8px",
       "--sjs-shadow-small": "0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
