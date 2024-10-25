@@ -53,6 +53,8 @@ body {
   background-color: var(--color-bg);
   text-align: center;
   margin: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#70e1f5;stop-opacity:1" /><stop offset="100%" style="stop-color:#ffd194;stop-opacity:1" /></linearGradient></defs><path fill="url(%23gradient)" fill-opacity="1" d="M0,160L30,138.7C60,117,120,75,180,90.7C240,107,300,181,360,197.3C420,213,480,171,540,144C600,117,660,107,720,133.3C780,160,840,224,900,234.7C960,245,1020,203,1080,160C1140,117,1200,75,1260,74.7C1320,75,1380,117,1410,138.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>') no-repeat center center fixed;
+  background-size: cover;
 }
 
 header {
@@ -69,6 +71,8 @@ main {
   min-height: var(--wrapper-height);
   place-items: center;
   margin: 3rem 2rem 0;
+  position: relative; /* Add this to ensure content sits on top of background */
+  z-index: 1; /* Ensure content is visible above background */
 }
 .content {
   display: flex;
