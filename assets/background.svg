@@ -2,8 +2,8 @@
   <defs>
     <!-- Updated Gradient Background: Light to Lighter Shades -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f0f8ff; stop-opacity:1" /> <!-- AliceBlue -->
-      <stop offset="100%" style="stop-color:#e6f7ff; stop-opacity:1" /> <!-- Light Cyan -->
+      <stop offset="0%" style="stop-color:#ffffff; stop-opacity:1" /> 
+      <stop offset="100%" style="stop-color:#ebebeb; stop-opacity:1" /> <!-- Light Cyan -->
     </linearGradient>
     
     <!-- Grid Pattern: Darker Grid Lines -->
