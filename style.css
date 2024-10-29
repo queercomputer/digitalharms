@@ -374,7 +374,7 @@ img.install {
   left: 0;
   transform: translateX(100%);
   transition: transform 0.5s ease;
-  z-index: 1000;
+  z-index: 250;
   padding-top: 20vh
 }
 
