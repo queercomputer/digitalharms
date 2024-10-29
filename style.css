@@ -562,7 +562,6 @@ div.smcx-widget-footer.smcx-embed-footer {
   border-top: 6px solid #990000;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  z-index: 2001; /* Above the survey content */
 }
 
 /* Spinner Animation */
