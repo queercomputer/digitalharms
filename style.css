@@ -462,6 +462,11 @@ div.smcx-widget-footer.smcx-embed-footer {
   display: none;
 }
 
+div.survey-page-body {
+  z-index:2000;
+}
+            
+
 .report-button {
   background-color: var(--color-buttons);
   color: #000000;
@@ -562,7 +567,7 @@ div.smcx-widget-footer.smcx-embed-footer {
   border-top: 6px solid #990000;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  z-index: 2001; /* Above the survey content */
+  z-index: 1001; /* Above the survey content */
 }
 
 /* Spinner Animation */

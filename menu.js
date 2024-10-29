@@ -87,26 +87,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const surveyContainer = document.querySelector('.survey-container');
         const loadingSpinner = document.getElementById('loading-spinner');
         if (surveyContainer && loadingSpinner) {
+            let initialContentLength = surveyContainer.innerHTML.length;
             // Create a MutationObserver to watch for changes in the survey container
             const observer = new MutationObserver((mutationsList, observer) => {
-                for (const mutation of mutationsList) {
-                    if (mutation.type === 'childList') {
-                        mutation.addedNodes.forEach(node => {
-                            if (node.nodeName === 'IFRAME') {
-                                console.log('Survey iframe added to the DOM');
-                                // Add a load event listener to the iframe
-                                node.addEventListener('load', () => {
-                                    console.log('Survey iframe has loaded');
-                                    loadingSpinner.style.display = 'none';
-                                });
-                                // Stop observing since we've found the iframe
-                                observer.disconnect();
-                            }
-                        });
-                    }
+                let currentContentLength = surveyContainer.innerHTML.length;
+                if (currentContentLength > initialContentLength + 5000) { // Adjust threshold as needed
+                    console.log('Survey content has loaded');
+                    loadingSpinner.style.display = 'none';
+                    // Stop observing
+                    observer.disconnect();
                 }
             });
-            // Start observing the survey container for childList changes
+            // Start observing the survey container for changes in the subtree
             observer.observe(surveyContainer, { childList: true, subtree: true });
             // Optional: Set a timeout to hide the spinner after a maximum wait time
             setTimeout(() => {
