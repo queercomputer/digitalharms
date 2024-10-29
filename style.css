@@ -575,3 +575,7 @@ div.survey-page-body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.survey-container:has(.smcx-embed) #loading-spinner {
+  display: none;
+}
