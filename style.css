@@ -499,7 +499,6 @@ div.survey-page-body {
   z-index: 2000;
   overflow: auto;
   opacity: 0;
-  visibility: hidden;
   pointer-events: none; /* Prevent interaction when hidden */
   transition: opacity 0.3s ease, background-color 0.3s ease;
 }
