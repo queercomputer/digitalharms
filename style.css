@@ -513,6 +513,7 @@ div.smcx-widget-footer.smcx-embed-footer {
   font-weight: bold;
   color: #aaa;
   text-decoration: none;
+  z-index: 2002;
 }
 
 .close-button:hover,
