@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (loadingSpinner) {
                 loadingSpinner.style.display = 'block';
             }
+            // Call the function to hide spinner when survey is loaded
+            hideSpinnerWhenSurveyLoaded();
             // Add to open modal function
             document.body.classList.add('modal-open');
             // Hide the hamburger menu
@@ -78,5 +80,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+    }
+
+    // Function to hide the spinner when the survey has loaded
+    function hideSpinnerWhenSurveyLoaded() {
+        const surveyContainer = document.querySelector('.survey-container');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        if (surveyContainer && loadingSpinner) {
+            // Create a MutationObserver to watch for changes in the survey container
+            const observer = new MutationObserver((mutationsList, observer) => {
+                for (const mutation of mutationsList) {
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(node => {
+                            if (node.nodeName === 'IFRAME') {
+                                console.log('Survey iframe added to the DOM');
+                                // Add a load event listener to the iframe
+                                node.addEventListener('load', () => {
+                                    console.log('Survey iframe has loaded');
+                                    loadingSpinner.style.display = 'none';
+                                });
+                                // Stop observing since we've found the iframe
+                                observer.disconnect();
+                            }
+                        });
+                    }
+                }
+            });
+            // Start observing the survey container for childList changes
+            observer.observe(surveyContainer, { childList: true, subtree: true });
+            // Optional: Set a timeout to hide the spinner after a maximum wait time
+            setTimeout(() => {
+                if (loadingSpinner.style.display !== 'none') {
+                    loadingSpinner.style.display = 'none';
+                    console.warn('Survey loading timed out. Spinner hidden.');
+                }
+            }, 15000); // 15 seconds timeout
+        } else {
+            console.error('Survey container or loading spinner not found');
+        }
     }
 });
