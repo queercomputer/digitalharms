@@ -545,3 +545,28 @@ div.smcx-widget-footer.smcx-embed-footer {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Loading Spinner Styles */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Spinner size */
+  width: 50px;
+  height: 50px;
+  /* Hide the spinner initially */
+  display: none;
+  /* Spinner styles */
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 2001; /* Above the survey content */
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
