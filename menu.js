@@ -25,10 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             console.log("Report button clicked");
             modalOverlay.classList.add('open');
-            // Add 'modal-open' class to hamburger to hide it
-            if (hamburger) {
-                hamburger.classList.add('modal-open');
-            }
         });
     } else {
         console.error("Report button or modal overlay not found");
@@ -40,10 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             console.log("Close button clicked");
             modalOverlay.classList.remove('open');
-            // Remove 'modal-open' class from hamburger to show it again
-            if (hamburger) {
-                hamburger.classList.remove('modal-open');
-            }
+            // Add to open modal function
+            document.body.classList.add('modal-open');  
         });
     }
 
@@ -53,10 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.target === modalOverlay) {
                 console.log("Clicked outside the survey container");
                 modalOverlay.classList.remove('open');
-                if (hamburger) {
-                    hamburger.classList.remove('modal-open');
-                }
+                // Add to close modal functions
+                document.body.classList.remove('modal-open');
             }
         });
     }
 });
+
+
+
