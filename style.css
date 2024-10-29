@@ -392,13 +392,17 @@ img.install {
   position: absolute;
   right: 30px;
   margin-top: 15px;
-  z-index:1001;
+  z-index:500;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.hamburger.modal-open {
+  display:none;
 }
 
 .hamburger span {
