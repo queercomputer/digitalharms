@@ -474,10 +474,15 @@ div.smcx-widget-footer.smcx-embed-footer {
   color: #ffffff;
 }
 
-#survey-container {
+.survey-container {
   position: relative;
   width: 100%;
   height: 100vh; /* Adjust as needed */
+  display:none;
+}
+
+.survey-container.open {
+  display: block;
 }
 
 .close-button {

@@ -282,39 +282,3 @@ screen.orientation.addEventListener("change", function (e) {
 // show/hide orientation classes
 showOrientationBlocks();
 
-document.addEventListener('DOMContentLoaded', function() {
-  const reportButton = document.getElementById('report-button');
-  const surveyContainer = document.getElementById('survey-container');
-  let surveyLoaded = false;
-
-  reportButton.addEventListener('click', function() {
-    if (!surveyLoaded) {
-      // Show the survey container
-      surveyContainer.style.display = 'block';
-
-      // Load the SurveyMonkey script dynamically
-      (function(t, e, s, n) {
-        var o, a, c;
-        t.SMCX = t.SMCX || [];
-        if (e.getElementById(n)) return;
-        o = e.getElementsByTagName(s);
-        a = o[o.length - 1];
-        c = e.createElement(s);
-        c.type = 'text/javascript';
-        c.async = true;
-        c.id = n;
-        c.src = 'https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd28BL6vjvzQMmLpKR2oaIiQ2ZqunLxTMz9tUH4ENEyDM.js';
-        a.parentNode.insertBefore(c, a);
-      })(window, document, 'script', 'smcx-sdk');
-
-      surveyLoaded = true;
-    } else {
-      // If the survey is already loaded, just show the container
-      surveyContainer.style.display = 'block';
-    }
-  });
-});
-
-document.getElementById('close-survey').addEventListener('click', function() {
-  surveyContainer.style.display = 'none';
-});
