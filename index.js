@@ -282,32 +282,12 @@ screen.orientation.addEventListener("change", function (e) {
 // show/hide orientation classes
 showOrientationBlocks();
 
-function loadSurveyMonkey() {
-  (function(t, e, s, n) {
-    var o, a, c;
-    t.SMCX = t.SMCX || [];
-    t.SMCX.push(['trigger', 'survey']); // This line triggers the survey
-    if (e.getElementById(n)) return;
-    o = e.getElementsByTagName(s);
-    a = o[o.length - 1];
-    c = e.createElement(s);
-    c.type = 'text/javascript';
-    c.async = true;
-    c.id = n;
-    c.src = 'https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd28BL6vjvzQMmLpKR2oaIiQ2ZqunLxTMz9tUH4ENEyDM.js';
-    a.parentNode.insertBefore(c, a);
-  })(window, document, 'script', 'smcx-sdk');
-}
-
-document.getElementById('report-button').addEventListener('click', function() {
-  loadSurveyMonkey();
-});
-
-let surveyLoaded = false;
-
-document.getElementById('report-button').addEventListener('click', function() {
-  if (!surveyLoaded) {
-    loadSurveyMonkey();
-    surveyLoaded = true;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('report-button').addEventListener('click', function() {
+    if (window.SMCX && typeof window.SMCX.open === 'function') {
+      window.SMCX.open();
+    } else {
+      console.error('SurveyMonkey script not loaded yet.');
+    }
+  });
 });
