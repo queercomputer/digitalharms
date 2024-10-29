@@ -483,7 +483,7 @@ div.smcx-widget-footer.smcx-embed-footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  z-index: 1000; /* Ensure it overlays other elements */
+  z-index: 2000; /* Ensure it overlays other elements */
   overflow: auto; /* Enable scroll if content overflows */
 }
 
