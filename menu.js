@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const reportButton = document.getElementById('report-button');
     const modalOverlay = document.getElementById('modal-overlay');
     const closeButton = document.querySelector('.close-button');
+    const loadingSpinner = document.getElementById('loading-spinner');
 
     // Existing hamburger menu functionality
     if (hamburger && mobileLinks) {
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Report button clicked");
             modalOverlay.classList.add('open');
             // Show the loading spinner
-            const loadingSpinner = document.getElementById('loading-spinner');
             if (loadingSpinner) {
                 loadingSpinner.style.display = 'block';
             }
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Close button clicked");
             modalOverlay.classList.remove('open');
             // Hide the loading spinner
-            const loadingSpinner = document.getElementById('loading-spinner');
             if (loadingSpinner) {
                 loadingSpinner.style.display = 'none';
             }
@@ -69,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log("Clicked outside the survey container");
                 modalOverlay.classList.remove('open');
                 // Hide the loading spinner
-                const loadingSpinner = document.getElementById('loading-spinner');
                 if (loadingSpinner) {
                     loadingSpinner.style.display = 'none';
                 }
@@ -85,28 +83,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to hide the spinner when the survey has loaded
     function hideSpinnerWhenSurveyLoaded() {
         const surveyContainer = document.querySelector('.survey-container');
-        const loadingSpinner = document.getElementById('loading-spinner');
         if (surveyContainer && loadingSpinner) {
-            let initialContentLength = surveyContainer.innerHTML.length;
             // Create a MutationObserver to watch for changes in the survey container
             const observer = new MutationObserver((mutationsList, observer) => {
-                let currentContentLength = surveyContainer.innerHTML.length;
-                if (currentContentLength > initialContentLength + 5000) { // Adjust threshold as needed
-                    console.log('Survey content has loaded');
-                    loadingSpinner.style.display = 'none';
-                    // Stop observing
-                    observer.disconnect();
+                for (const mutation of mutationsList) {
+                    if (mutation.type === 'childList') {
+                        // Check if any added nodes contain the 'smcx-embed' class
+                        for (const node of mutation.addedNodes) {
+                            if (node.nodeType === Node.ELEMENT_NODE) {
+                                if (node.classList.contains('smcx-embed') || node.querySelector('.smcx-embed')) {
+                                    console.log('smcx-embed element added to the DOM');
+                                    // Hide the spinner
+                                    loadingSpinner.style.display = 'none';
+                                    // Stop observing
+                                    observer.disconnect();
+                                    break;
+                                }
+                            }
+                        }
+                    }
                 }
             });
-            // Start observing the survey container for changes in the subtree
+            // Start observing the survey container
             observer.observe(surveyContainer, { childList: true, subtree: true });
-            // Optional: Set a timeout to hide the spinner after a maximum wait time
+            // Optional timeout to prevent indefinite spinner
             setTimeout(() => {
                 if (loadingSpinner.style.display !== 'none') {
                     loadingSpinner.style.display = 'none';
                     console.warn('Survey loading timed out. Spinner hidden.');
+                    // Stop observing
+                    observer.disconnect();
                 }
-            }, 15000); // 15 seconds timeout
+            }, 15000); // Adjust timeout as needed
         } else {
             console.error('Survey container or loading spinner not found');
         }
