@@ -525,14 +525,6 @@ div.survey-page-body {
   transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Loading Message */
-.loading-message {
-  font-size: 18px;
-  color: #333;
-  text-align: center;
-  padding: 20px;
-}
-
 /* Animate the survey container when modal is open */
 .modal-overlay.open .survey-container {
   opacity: 1;
