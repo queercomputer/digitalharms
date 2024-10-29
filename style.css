@@ -453,3 +453,23 @@ div.sd-action-bar.sd-footer.sd-body__navigation.sd-clearfix {
 div.smcx-widget-footer.smcx-embed-footer {
   display: none;
 }
+
+.report-button {
+  background-color: var(--color-buttons);
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  margin: 20px auto;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.report-button:hover {
+  background-color: var(--color-forms);
+  color: #ffffff;
+}
