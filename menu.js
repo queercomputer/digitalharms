@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (loadingSpinner) {
                 loadingSpinner.style.display = 'block';
             }
-            // Call the function to hide spinner when survey is loaded
-            hideSpinnerWhenSurveyLoaded();
             // Add to open modal function
             document.body.classList.add('modal-open');
             // Hide the hamburger menu
@@ -80,34 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    }
-
-    // Function to hide the spinner when the survey has loaded
-    function hideSpinnerWhenSurveyLoaded() {
-        const surveyContainer = document.querySelector('.survey-container');
-        const loadingSpinner = document.getElementById('loading-spinner');
-        if (surveyContainer && loadingSpinner) {
-            // Create a MutationObserver to watch for changes in the survey container
-            const observer = new MutationObserver((mutationsList, observer) => {
-                // Check if the survey iframe has loaded
-                if (surveyContainer.querySelector('iframe')) {
-                    // Survey has loaded, hide the spinner
-                    loadingSpinner.style.display = 'none';
-                    // Stop observing
-                    observer.disconnect();
-                }
-            });
-            // Start observing the survey container for childList changes
-            observer.observe(surveyContainer, { childList: true, subtree: true });
-            // Set a timeout to hide the spinner after 10 seconds (optional)
-            setTimeout(() => {
-                if (loadingSpinner.style.display !== 'none') {
-                    // Hide the spinner
-                    loadingSpinner.style.display = 'none';
-                    // Optionally, display an error message
-                    // alert('The survey is taking longer than expected to load. Please try again later.');
-                }
-            }, 10000); // 10 seconds
-        }
     }
 });
