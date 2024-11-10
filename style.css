@@ -206,7 +206,7 @@ ul {
 .wrapper a:not(.btn--remix):link,
 .wrapper a:not(.btn--remix):visited {
   text-decoration: none;
-  border-bottom: 4px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-text-main);
   color: var(--color-text-main);
   transition: background 0.2s linear;
 }
