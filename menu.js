@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
           hamburger.classList.add('modal-open');
         }
       });
-    } else {
-      console.error("Report button or modal overlay not found");
     }
   
     // Close the modal when the close button is clicked
