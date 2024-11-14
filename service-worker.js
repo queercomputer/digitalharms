@@ -17,8 +17,8 @@ self.addEventListener("install", (e) => {
         "/contact.html",
         "/faq.js",
         "/index.html",
-        "instructions.html",
-        "menu.js",
+        "/instructions.html",
+        "/menu.js",
         "/support.html",
         "/theme.js"
       ]);
