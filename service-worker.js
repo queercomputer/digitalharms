@@ -8,9 +8,19 @@
 self.addEventListener("install", (e) => {
   e.waitUntil(
     // Give the cache a name
-    caches.open("glitch-hello-installable-cache").then((cache) => {
+    caches.open("digitalharms-cache").then((cache) => {
       // Cache the homepage and stylesheets - add any assets you want to cache!
-      return cache.addAll(["/", "/style.css", "/index.js"]);
+      return cache.addAll([
+        "/", 
+        "/style.css", 
+        "/index.js",
+        "/contact.html",
+        "/faq.js",
+        "/index.html",
+        "instructions.html",
+        "menu.js",
+        "/support.html"
+      ]);
     })
   );
 });
