@@ -179,8 +179,9 @@
         console.log("Survey results: " + JSON.stringify(result.data));
 
         // Send survey data to the backend (update the URL to your server endpoint)
-        fetch('https://script.google.com/macros/s/AKfycbz51u3tEJ1IqP7LXjhA-TRVVoJSu7KPzAWlU7h0Ziqs33wonZc0jrI3GdjriindyMKc/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbxmGZWSaohmK_a4gGgB_PADJmEwkIZjypmqPWPYOv5-ulbA2pei6035ecMToxCwC9Z0/exec', {
           method: 'POST',
+          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
