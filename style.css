@@ -201,6 +201,10 @@ ul {
   text-align: start
 }
 
+.email {
+  font-size: 14px;
+}
+
 
 /* Link styles */
 .wrapper a:not(.btn--remix):link,
