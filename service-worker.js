@@ -20,7 +20,8 @@ self.addEventListener("install", (e) => {
         "/instructions.html",
         "/menu.js",
         "/support.html",
-        "/theme.js"
+        "/theme.js",
+        "/assets/"
       ]);
     })
   );
